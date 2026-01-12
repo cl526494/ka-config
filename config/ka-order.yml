@@ -43,7 +43,7 @@ httpclient:
 logging:
   level:
     root: warn
-    com.cl.ka: debug
+    com.cl.ka: warn
 #    org.apache.kafka.clients.producer: trace
 #    org.apache.kafka.clients.producer.internals.Sender: trace
 #    ## org.springframework.kafka.listener.KafkaMessageListenerContainer: trace
