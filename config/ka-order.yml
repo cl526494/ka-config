@@ -4,12 +4,12 @@ server:
 spring:
   application:
     name: ka-order
-  # 链路追踪
-  sleuth:
-    enabled: true
-    sampler:
-      # 采样率 (1.0 表示 100% 追踪请求)
-      probability: 1.0
+# 链路追踪
+#  sleuth:
+#    enabled: true
+#    sampler:
+#      # 采样率 (1.0 表示 100% 追踪请求)
+#      probability: 1.0
   # kafka
   kafka:
     bootstrap-servers: kafka01.docker.com:9092,kafka02.docker.com:9093,kafka03.docker.com:9094
@@ -39,6 +39,16 @@ spring:
 
 httpclient:
   read-timeout: 10
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "info"
+  endpoint:
+    info:
+      enabled: true
 
 logging:
   level:
