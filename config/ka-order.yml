@@ -27,28 +27,28 @@ spring:
       properties:
         metadata.max.age.ms: 100000
 
-    # mysql
-    datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost.huawei.com:3306/ka_order?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
-      username: root
-      password: ENC(v1:xSUqBYHO1lWmC3OKfo5ixfFxmjmSuVwbZ6/2gIg7ams=)
-      hikari:
-        minimum-idle: 2
-        maximum-pool-size: 10
-        connection-timeout: 30000
-        idle-timeout: 600000
-        max-lifetime: 1800000
+  # mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost.huawei.com:3306/ka_order?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: ENC(v1:xSUqBYHO1lWmC3OKfo5ixfFxmjmSuVwbZ6/2gIg7ams=)
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 10
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
 
-    # redis
-    redis:
-      host: redis.docker.com
-      database: 0
-      jedis:
-        pool:
-          max-active: 2000
-          max-idle: 20
-      port: 6379
+  # redis
+  redis:
+    host: redis.docker.com
+    database: 0
+    jedis:
+      pool:
+        max-active: 2000
+        max-idle: 20
+    port: 6379
 
 httpclient:
   read-timeout: 10
