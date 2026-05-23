@@ -4,3 +4,10 @@ eureka:
       defaultZone: http://host.docker.internal:8761/eureka/
   instance:
     prefer-ip-address: true
+
+# 数据库参数密码加密
+ka:
+  jdbc:
+    crypto:
+      enabled: true
+      key: test001   
