@@ -58,10 +58,11 @@ management:
   endpoints:
     web:
       exposure:
-        include: "info"
+        include: health, info
   endpoint:
     info:
       enabled: true
+      
 
 # mybatis 配置
 mybatis:
