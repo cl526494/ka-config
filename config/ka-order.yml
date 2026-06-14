@@ -16,6 +16,8 @@ spring:
     producer:
       acks: 1
       retries: 1
+      properties:
+        max.request.size: 1385408
     consumer:
       auto-offset-reset: latest
       max-poll-records: 1
